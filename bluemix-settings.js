@@ -51,17 +51,14 @@ var settings = module.exports = {
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
-    functionGlobalContext: { },
+    functionGlobalContext: {
+    crc:require('crc')    
+    },
 
     storageModule: require("./couchstorage")
 }
 
-//added this code to make the CRC package available to NodeRED 2-23-17
-functionGlobalContext: {
-  crc:require('crc')
-},
-//end of edit
-    
+   
 if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
     settings.adminAuth = {
         type: "credentials",
