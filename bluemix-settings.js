@@ -56,6 +56,12 @@ var settings = module.exports = {
     storageModule: require("./couchstorage")
 }
 
+//added this code to make the CRC package available to NodeRED 2-23-17
+functionGlobalContext: {
+  crc:require('crc')
+},
+//end of edit
+    
 if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
     settings.adminAuth = {
         type: "credentials",
