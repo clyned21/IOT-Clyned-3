@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: IOT-Clyned-3
+  host: IOT-Clyned-3
+  disk_quota: 1024M
+  services:
+  - IOT-Clyned-3-cloudantNoSQLDB
+  - IOT-Clyned-3-iotf-service
